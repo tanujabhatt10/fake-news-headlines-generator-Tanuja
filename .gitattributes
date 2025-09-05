@@ -1,0 +1,32 @@
+import random
+
+subjects = [
+    "Politician" , "celebrity" ,"scientist" , "billonarie" ,
+    "AI robot" , "startup founder" , "startup founder" , "cricketer" , "singer" 
+]
+actions = [
+    "claims" , "reveals" , "announces" , "denies" ,
+    "launches" , "discovers" , "warns about" , "predicts"
+]
+objects = [
+    "new planet ", "secret technolgy" , "immortality pill",
+        "aliens" , "end of the world" , "time travel machine",
+      "flying cars" , "parallel universe"    
+]
+extras = [
+    "shocks the world ", "goes viral","causes panic",
+        "breaks the interner" , "changes history" , "sparks protests"   
+]
+def generate_fake_headline():
+    subject = random.choice(subjects)
+    action = random.choice(actions)
+    object = random.choice(objects)
+    extra = random.choice(extras)
+
+    headline = f"{subject} {action} {object}{extra}"
+    return headline
+print("<<---- FAKE NEWS HAEDLINE GENERAATOR  ---->>\n")
+for i in range (5):
+    print(f" {i+1}.{generate_fake_headline()}")
+
+ 
